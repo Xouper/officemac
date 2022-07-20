@@ -1,0 +1,9 @@
+#btn {
+    width: 200px;
+    height: 50px;
+    background-color: aliceblue;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
