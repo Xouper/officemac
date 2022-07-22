@@ -17,10 +17,11 @@
 import './commands'
 
 Cypress.on('uncaught:exception', (err, runnable) => {
-    if (err.message.includes('require is not defined')) {
-      return false
-    }
-  })
+  if (err.message.includes('require is not defined')) {
+    return false
+  }
+})
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

@@ -5,7 +5,7 @@
   "main": "hello-worlds.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open"
+    "start": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "homepage": "https://github.com/Xouper/officemac#readme",
   "devDependencies": {
     "cypress": "^10.3.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8"
   }
 }
