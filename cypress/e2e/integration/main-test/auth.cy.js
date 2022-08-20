@@ -4,6 +4,7 @@ const page = new AuthPage();
 describe("Authorization-Test", () => {
   beforeEach('Начало теста', () => {
     cy.visit('');
+
   })
   it("Exists elements of page", () => {
     page.logoPolymatica.should('exist').and('be.visible');

@@ -1,0 +1,18 @@
+{
+    "row":{
+       "id":8,
+       "create_date":"2022-08-03T13:32:33.447059Z",
+       "update_date":"2022-08-16T14:17:50.788360044Z",
+       "auth_method":"api",
+       "username":"test123",
+       "first_name":"test123",
+       "middle_name":"test12",
+       "last_name":"test123",
+       "email":"test123@bk.ru",
+       "comment":"",
+       "image_path":"",
+       "role_id":null,
+       "super_user":true,
+       "groups":null
+    }
+ }

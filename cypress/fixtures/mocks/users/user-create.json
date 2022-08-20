@@ -1,0 +1,18 @@
+{
+    "row": {
+        "id": 5,
+        "create_date": "2022-04-06T07:15:05.026994134Z",
+        "update_date": "2022-04-06T07:15:05.026994134Z",
+        "username": "autotestUI",
+        "first_name": "autotestUI",
+        "middle_name": "autotestUI",
+        "last_name": "autotestUI",
+        "email": "autotestUI@pochta.ru",
+        "comment": "autotestUI",
+        "image_path": "",
+        "role_id": null,
+        "role": null,
+        "super_user": false,
+        "groups": []
+    }
+}

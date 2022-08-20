@@ -57,10 +57,15 @@ class UserPage {
         return cy.get('td[class="actions"]')
     }
     get settingOfUser() {
-        return this.actionsOfUser.find('core-action[type="setup"]')
+        this.actionsOfUser.find('core-action[type="setup"]').first().click()
+        return new UserModal()
     }
     get deleteUser() {
-        return this.actionsOfUser.find('core-action[type="delete"]')
+        return this.actionsOfUser.find('core-action[type="delete"]').children().shadow().find('button').first()
+    }
+    get deleteUserAction() {
+        this.deleteUser.click()
+        return new UserModal()
     }
 }
 export default UserPage

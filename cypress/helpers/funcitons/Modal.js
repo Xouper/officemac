@@ -1,4 +1,6 @@
-export class UserModal {
+import { Base } from "./Base"
+
+export class UserModal extends Base{
     get modalWnidow() {
         return cy.get('app-user-modal')
     }
@@ -33,7 +35,7 @@ export class UserModal {
         return this.userForm.find('sl-input[name="password"]').find('span')
     }
     get email() {
-        return this.userForm.find('sl-input[name="email"]').shadow().find('slot')
+        return this.userForm.find('sl-input[name="email"]').shadow().find('input')
     }
     get lastname() {
         return this.userForm.find('sl-input[name="last_name"]').shadow().find('slot')
@@ -74,8 +76,38 @@ export class UserModal {
     get cancel() {
         return this.modalActions.contains('Отменить')
     }
-    get add() {
-        return this.modalActions.contains('Создать')
+    get create() {
+        return this.modalActions.find('sl-button[type="submit"]')
     }
-}
+    get roleMenu() {
+        return cy.get('sl-menu')
+    }
+    get chooseRoleNone() {
+        return this.roleMenu.contains('Без роли')
+    }
+    get chooseRoleInput() {
+        return this.chooseRole.shadow().find('input')
+    }
+    get createButton() {
+        return this.create.shadow().find("button")
+    }
+    get saveButton() {
+        return cy.get('.right-panel')
+    }
+    get deleteUserConfirm() {
+        return cy.get('app-confirm[title="deleteUserConfirm"]')
+    }
+    get deleteUserTitle() {
+        return this.deleteUserConfirm.first().children().find('h1')
+    }
+    get deleteUserDescription() {
+        return this.deleteUserConfirm.first().children().find('p')
+    }
+    get deleteUserButtons() {
+        return this.deleteUserConfirm.find('.buttons')
+    }
+    get deleteUserApply() {
+        return this.deleteUserButtons.contains('Применить')
+    }
+ }
 export default UserModal
