@@ -1,6 +1,6 @@
 class AuthPage {
     get logoPolymatica() {
-        return cy.get('.container .logo sl-icon[name = logo]');
+        return cy.get('sl-icon[name="polymatica-logo-medium"]');
     }
     get logoDescription() {
         return cy.get('.logo-description');

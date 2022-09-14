@@ -5,24 +5,8 @@ const page = new UserPage()
 const notify = new Notifications()
 
 describe("AutoAuthorization", () => {
-  let hatTable = [
-    'Фамилия',
-    'Имя',
-    'Отчество',
-    'Логин',
-    'E-mail',
-    'Дата создания',
-    'Дата изменения',
-    'Действия',
-  ];
-  let mass = [
-    'last_name',
-    'first_name',
-    'middle_name',
-    'email',
-    'password',
-    'username',
-  ];
+  let hatTable = ['Фамилия','Имя','Отчество','Логин','E-mail','Дата создания','Дата изменения','Действия',];
+  let mass = ['last_name','first_name','middle_name','email','password','username',];
   let names = ['Фамилия', 'Имя', 'Отчество', 'E-mail', 'Пароль', 'Логин'];
   beforeEach('Начало теста', () => {
     beforeEachTest('/setting/user-list/');

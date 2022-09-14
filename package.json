@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/Xouper/officemac#readme",
   "devDependencies": {
-    "cypress": "^10.3.0"
-},
-"dependencies": {
-  "ejs":"^3.1.8"
-}
+    "cypress": "^10.7.0"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8"
+  }
 }

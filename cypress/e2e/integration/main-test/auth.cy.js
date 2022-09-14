@@ -9,19 +9,16 @@ describe("Authorization-Test", () => {
   it("Exists elements of page", () => {
     page.logoPolymatica.should('exist').and('be.visible');
     page.logoDescription.should('exist').and('contain.text', ' Конструктор информационных панелей ');
-    page.body_title.should('exist').and('contain.text', ' Войти ');
-    page.login_label.should('exist').and('contain.text', 'Логин');
-    page.login.should('exist').and('have.attr', 'placeholder', 'Введите свой логин')
+    page.login.should('exist').and('have.attr', 'placeholder', 'Логин')
     page.login.type('321', { force: true })
     page.login.should('have.value', '321')
-    page.password_label.should('exist').and('contain.text', 'Пароль');
     page.password.should('exist').and('have.attr', 'placeholder', 'Пароль')
     page.password.type('123', { force: true })
     page.password.should('have.value', '123')
     page.eye_button.should('exist').and('be.visible')
     page.eye_button.click({ force: true })
     page.eye_button.should('have.attr', 'aria-label', 'Hide password')
-    page.rememberPassword.should('exist').and('contain.text', ' Запомнить меня ')
+    page.rememberPassword.should('exist').and('contain.text', ' Запомнить ')
     page.rememberPassword_label.should('exist')
     page.rememberPassword_label.check({ force: true })
     page.rememberPassword_label.should('have.attr', 'aria-checked', 'true')
@@ -30,9 +27,6 @@ describe("Authorization-Test", () => {
     page.enterButton.click({ force: true })
     page.wrongLoginOrPassword.should('exist').and('contain.text', ' Неверный логин или пароль ')
     page.wrongLoginOrPassword.should('have.css', 'color', 'rgb(242, 66, 53)')
-    page.forgotPassword.should('exist').and('contain.text', ' Забыли пароль ')
-    page.forgotPasswordButton.should('have.css', 'color', 'rgb(0, 174, 213)')
-    page.forgotPasswordButton.click()
     page.passwordRecovery.should('exist').and('contain.text', ' Восстановление пароля ')
     page.passwordRecoveryDescription.should('exist').and('contain.text', ' Укажите свою почту, мы вышлем инструкцию для восстановления пароля ')
     page.recoveryButton.click({force:true})

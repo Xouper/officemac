@@ -10,7 +10,7 @@ export function auth() {
         password: 'qwe123',
     };
 
-    cy.request('POST', '/api/v1/auth/login/', {
+    cy.request('POST', 'api/v1/auth/api/login', {
         username: username,
         password: password,
     }).then((response) => {
