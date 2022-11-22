@@ -1,8 +1,7 @@
-import { auth } from './auth';
-import { MockService } from './mock';
+import {auth} from './autologin'
+export function beforeEachPositive(page) {
+    if (page != '') auth();
 
-export function beforeEachTest(page) {
-    new MockService().setSuccessRequests();
-    if (page != '/auth') auth();
     cy.visit(page);
+    cy.wait(100);
 }
