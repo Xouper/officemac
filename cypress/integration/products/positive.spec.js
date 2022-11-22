@@ -15,16 +15,16 @@ describe('Working of products page', () => {
     beforeEach(() => {
         beforeEachPositive('/product')
     })
-    // it ('Check user-access', ()=>{
-    //     modal.ageWarning.should('be.visible').and('contain.text', 'Для доступа на сайт необходимо подтвердить возраст')
-    //     modal.ageWarningDescription.should('be.visible').and('contain.text', ' Сайт содержит информацию, не рекомендованную для лиц, не достигших совершеннолетнего возраста. Сведения, размещенные на сайте, носят исключительно информационный характер и предназначены только для личного использования. ')
-    //     modal.number18.should('be.visible').and('contain.text', '18+')
-    //     modal.slButtonEntrance.should('be.visible').and('contain.text', ' Мне исполнилось 18 лет ')
-    //     modal.buttonEntrance.should('exist').and('be.visible')
-    //     modal.slButtonExist.should('be.visible').and('contain.text', ' Мне меньше 18 лет ')
-    //     modal.buttonExist.should('exist').and('be.visible')
-    //     modal.buttonEntrance.click()
-    // })
+    it ('Check user-access', ()=>{
+        modal.ageWarning.should('be.visible').and('contain.text', 'Для доступа на сайт необходимо подтвердить возраст')
+        modal.ageWarningDescription.should('be.visible').and('contain.text', ' Сайт содержит информацию, не рекомендованную для лиц, не достигших совершеннолетнего возраста. Сведения, размещенные на сайте, носят исключительно информационный характер и предназначены только для личного использования. ')
+        modal.number18.should('be.visible').and('contain.text', '18+')
+        modal.slButtonEntrance.should('be.visible').and('contain.text', ' Мне исполнилось 18 лет ')
+        modal.buttonEntrance.should('exist').and('be.visible')
+        modal.slButtonExist.should('be.visible').and('contain.text', ' Мне меньше 18 лет ')
+        modal.buttonExist.should('exist').and('be.visible')
+        modal.buttonEntrance.click()
+    })
     it("Check expert", ()=>{
         page.avatar.should('be.visible').and('contain.text', 'УА')
         page.userName.should('be.visible').and('contain.text', 'Алексей Устинов')
